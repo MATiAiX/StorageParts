@@ -2,11 +2,9 @@ package com.mtxsoftware.StorageParts.controller;
 
 import com.mtxsoftware.StorageParts.model.PagerModel;
 import com.mtxsoftware.StorageParts.model.entity.Part;
-import com.mtxsoftware.StorageParts.model.repository.PartRepository;
 import com.mtxsoftware.StorageParts.model.service.PartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
