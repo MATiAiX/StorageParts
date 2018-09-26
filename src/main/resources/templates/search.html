@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- CSS INCLUDE -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous"></link>
+    <!-- EOF CSS INCLUDE -->
+    <style>
+        .pagination-centered {
+            text-align: center;
+        }
+        .disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        .pointer-disabled {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- PAGE TITLE -->
+    <div class="StorageParts">
+        <h2>
+            <a th:href="@{'/'}"><i class="glyphicon glyphicon-align-justify"></i>Storage Parts</a>
+        </h2>
+    </div>
+    <!-- END PAGE TITLE -->
+    <div class="container">
+        <form class="form-horizontal" th:action="@{/setsearch}" name="edit_form" id="edit_form"
+              method="post" role="form">
+
+            <div class="form-group">
+                <label>Name of part</label>
+                <input type="text" class="form-control" id="name" th:name="name" th:value="*{name}" maxlength="100"/>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
